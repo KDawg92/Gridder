@@ -14,16 +14,15 @@ public class GroundCheck : MonoBehaviour {
 	void Update () {
 
 		onGround = false;
-
-		if(Physics2D.Raycast (new Vector2(transform.position.x, transform.position.y) + new Vector2(0.5f, 0), -Vector2.up, transform.localScale.y))
+		if(Physics2D.Raycast (new Vector2(transform.position.x, transform.position.y) - new Vector2(0.3f, 0), -Vector2.up, transform.localScale.y/3, layM))
 		{
 			onGround = true;
 		}
-		if(Physics2D.Raycast (new Vector2(transform.position.x, transform.position.y) + new Vector2(-0.5f, 0), -Vector2.up, transform.localScale.y))
+		if(Physics2D.Raycast (new Vector2(transform.position.x, transform.position.y) + new Vector2(0.3f, 0), -Vector2.up, transform.localScale.y/3, layM))
 		{
 			onGround = true;
 		}
-		if(Physics2D.Raycast (new Vector2(transform.position.x, transform.position.y), -Vector2.up, transform.localScale.y, layM))
+		if(Physics2D.Raycast (new Vector2(transform.position.x, transform.position.y), -Vector2.up, transform.localScale.y/3, layM))
 		{
 			onGround = true;
 		}

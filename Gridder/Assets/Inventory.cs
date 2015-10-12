@@ -8,6 +8,7 @@ public class Inventory : MonoBehaviour {
 	public GameObject[] slots;
 	public GameObject currentSlot;
 	public bool InventoryActive;
+	public string playerNum;
 
 	// Use this for initialization
 	void Start () {
@@ -36,7 +37,7 @@ public class Inventory : MonoBehaviour {
 //		{
 //			slots[i].SetActive (false);
 //		}
-		if(Input.GetButtonDown("Inventory"))
+		if(Input.GetButtonDown("Inventory" + playerNum))
 		{
 
 			for(int i = 0; i < 10; i++)

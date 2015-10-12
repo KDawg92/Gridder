@@ -14,7 +14,7 @@ public class WaterRise : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		waterLevel += Time.deltaTime/5;
-		waterRep.position = new Vector3 (waterRep.position.x, waterLevel ,waterRep.position.z);
+		waterLevel += Time.deltaTime/5f;
+		waterRep.position = new Vector3 (waterRep.position.x, waterLevel - 55f ,waterRep.position.z);
 	}
 }

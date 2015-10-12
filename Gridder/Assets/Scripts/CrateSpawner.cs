@@ -23,6 +23,6 @@ public class CrateSpawner : MonoBehaviour {
 	{
 		//-14, 14
 		float startX = Random.Range (-14, 14);
-		Instantiate (Crate, new Vector3(startX ,Player.transform.position.y + 14 ,0), Quaternion.identity);
+		Instantiate (Crate, new Vector3(startX ,Player.transform.position.y + 16 ,0), Quaternion.identity);
 	}
 }

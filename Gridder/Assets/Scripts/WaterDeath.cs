@@ -12,8 +12,8 @@ public class WaterDeath : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if(transform.position.y < waterManager.GetComponent<WaterRise>().waterLevel)
-			print ("Dead");
+		if (transform.position.y < waterManager.GetComponent<WaterRise> ().waterLevel)
+			Application.Quit ();
 	
 	}
 }

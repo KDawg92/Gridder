@@ -21,9 +21,23 @@ public class lootGrab : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		print ("Yo!");
-		Destroy (other.transform.parent.gameObject);
-		ItemSpawner.GetComponent<ItemSpawner>().ObjectInventory[Random.Range (0, ItemSpawner.GetComponent<ItemSpawner>().ObjectInventory.Length - 1 )]++;
+//		print ("Yo!");
+		if (other.tag == "Loot") {
+			Destroy (other.transform.parent.gameObject);
+			ItemSpawner.GetComponent<ItemSpawner> ().ObjectInventory [Random.Range (0, ItemSpawner.GetComponent<ItemSpawner> ().ObjectInventory.Length - 1)]++;
+		}
+		else if(other.tag == "Platform")
+		{
+			transform.parent = other.transform;
+		}
+	}
+
+	void OnTriggerExit2D(Collider2D other)
+	{
+		if(other.tag == "Platform")
+		{
+			transform.parent = null;
+		}
 	}
 
 }

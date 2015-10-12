@@ -13,7 +13,7 @@ public class movement : MonoBehaviour {
 	public Animator anim;
 	private float yRotation;
 
-	KeyCode jump = KeyCode.Space;
+	bool jump = false;
 
 	public enum Player
 	{
@@ -36,16 +36,17 @@ public class movement : MonoBehaviour {
 		if(currentPlayer == Player.one)
 		{
 			input = Input.GetAxis ("Horizontal");
-		//	jump = 
+			jump = Input.GetButtonDown("Jump");
 		}
 		else if(currentPlayer == Player.two)
 		{
 			input = Input.GetAxis ("Horizontal2");
-			//jump = KeyCode.U;
+			jump = Input.GetButtonDown("Jump2");
+
 		}
 
 
-
+		
 		if(input != 0 && myGround.onGround)
 		{
 
@@ -64,11 +65,15 @@ public class movement : MonoBehaviour {
 
 		transform.eulerAngles = new Vector3(0, yRotation, 0);
 
+		float temp = moveSpeed;
+		if (!myGround.onGround)
+			temp = moveSpeed / 2.5f;
 
-		if(GetComponent<Rigidbody2D>().velocity.x < 10)
-			GetComponent<Rigidbody2D>().AddForce(new Vector2(input * moveSpeed * Time.deltaTime,0));
-		if(Input.GetButtonDown("Jump") && myGround.onGround)
-			GetComponent<Rigidbody2D>().AddForce (new Vector2(0,0.15f));
+		if(Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x) < 6)
+			GetComponent<Rigidbody2D>().AddForce(new Vector2(input * temp * Time.deltaTime,0));
+		if (jump) {
+			GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0, 0.18f));
+		}
 
 
 

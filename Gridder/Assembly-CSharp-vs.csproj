@@ -48,6 +48,19 @@
   <ItemGroup>
      <Compile Include="Assets\BackCameraMove.cs" />
      <Compile Include="Assets\Inventory.cs" />
+     <Compile Include="Assets\Scripts\CSharp\Invent.cs" />
+     <Compile Include="Assets\Scripts\CSharp\Item.cs" />
+     <Compile Include="Assets\Scripts\CSharp\ItemDataBase.cs" />
+     <Compile Include="Assets\Scripts\CSharp\newBullet.cs" />
+     <Compile Include="Assets\Scripts\CSharp\newChunk.cs" />
+     <Compile Include="Assets\Scripts\CSharp\newEnemy.cs" />
+     <Compile Include="Assets\Scripts\CSharp\newMagnet.cs" />
+     <Compile Include="Assets\Scripts\CSharp\newMine.cs" />
+     <Compile Include="Assets\Scripts\CSharp\newPlayer.cs" />
+     <Compile Include="Assets\Scripts\CSharp\newShield.cs" />
+     <Compile Include="Assets\Scripts\CSharp\newSpawner.cs" />
+     <Compile Include="Assets\Scripts\CSharp\newTurret.cs" />
+     <Compile Include="Assets\Scripts\CSharp\newTurret2.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\CrateSpawner.cs" />
      <Compile Include="Assets\Scripts\GroundCheck.cs" />
@@ -59,9 +72,11 @@
      <Compile Include="Assets\Scripts\lootGrab.cs" />
      <Compile Include="Assets\Scripts\movement.cs" />
      <Compile Include="Assets\Scripts\movingBox.cs" />
+     <Compile Include="Assets\UIControl.cs" />
      <Compile Include="Assets\movingPlat.cs" />
      <Compile Include="Assets\rope.cs" />
      <Compile Include="Assets\rope2.cs" />
+     <Compile Include="Assets\stickyFeet.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
